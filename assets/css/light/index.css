@@ -1,0 +1,1072 @@
+@keyframes scrolling {
+    from{
+        transform: translateX(-100%);
+        left: 0;
+    }
+    to{
+        left: 100vw;
+        transform: translateX(0);
+    }
+    
+}
+section:not(.scrolling,:first-child){
+    padding-block: 8rem;
+}
+#home #video{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    backdrop-filter: blur(5px) brightness(0.2);
+    -webkit-backdrop-filter: blur(5px) brightness(0.2);
+    z-index: 3;
+}
+section#home:first-child{
+    background: url("../../imgs/backgrounds/background_light_top.png") top, url("../../imgs/backgrounds/background_light_bottom.png") bottom;
+    background-size: cover;
+    padding-top: 150px;
+    padding-bottom: 200px;
+}
+@media screen and (max-width: 850px) {
+    section#home:first-child{
+        background: url("../../imgs/backgrounds/background_light_top_mobile.png") top, url("../../imgs/backgrounds/background_light_bottom_mobile.png") bottom;
+        background-size: cover;
+    }
+}
+#home #video video{
+    aspect-ratio: 16/9;
+    width: 50%;
+    height: auto;
+}
+#home #video button{
+    margin-top: 3rem;
+}
+
+#home .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#home .container .text{
+    flex-basis: 45%;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+#home .container .text p{
+    font-size: 2.5rem;
+    color: #f4edd9;
+    background-color: #44b4ac;
+    width: fit-content;
+    padding: 1rem 2rem;
+    border-radius: 3rem;
+    box-shadow: black 10px 8px;
+    border: solid black 3px;
+    margin: 0;
+   
+}
+#home .container .text h1{
+    font-size: 15rem;
+    margin: 0;
+    -webkit-text-stroke-color: black;
+    -webkit-text-stroke-width: 1px;
+    color: #44b4ac;
+    height: fit-content;
+    text-shadow: #2d7570 10px 5px;
+}
+#home .container .text h1 span{
+    display: block;
+    color: #909494;
+    text-shadow: black 10px 5px;
+    margin-top: -5rem;
+}
+#home .container .text h2{
+    font-family: Jost;
+    font-size: 4.5rem;
+    margin: 0;
+    white-space: nowrap;
+}
+#home .container .text h2 span{
+    color: #44b4ac;
+    font-family: Boldenvan;
+    position: relative;
+    font-weight: bold;
+}
+
+#home .container .text h2 span:after{
+    content: "";
+    width: 5px;
+    height: 100%;
+    background-color: black;
+    right: -1rem;
+    top: 0;
+    position: absolute;
+    animation: blink 1s infinite steps(2, start);
+}
+@keyframes blink {
+    to{
+        visibility: hidden;
+    }
+    
+}
+
+
+#home .container .text div{
+    display: flex;
+    margin-top: 5rem;
+    width: 100%;
+}
+#home .container .text div *{
+    margin-right: 5rem;
+    white-space: nowrap;
+    display: block;
+}
+
+
+
+#home .container .photo{
+    flex-basis: 30%;
+    position: relative;
+   
+}
+@media screen and (max-width: 1000px) {
+    #home .container .photo{
+        display: none;
+    }
+    
+}
+#home .container .photo img{
+    position: relative;
+    aspect-ratio: 3/4;
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: all 0.2s;
+    margin-inline: auto;
+    object-fit: contain;
+    overflow-y: hidden;
+    z-index: 1;
+}
+#home .container .photo:after{
+    content: "";
+    width: 100%;
+    height: 90%;
+    position: absolute;
+    bottom: 3px;
+    left: 0;
+    background-color: #44b4ac;
+    z-index: 0;
+    border-radius: 20px;
+    box-shadow: 25px 25px black;
+    transition: all 0.2s;
+    border: solid black 3px;
+
+}
+#home .container .photo:hover:after{
+    background-color: black;
+    box-shadow: #44b4ac 16px 16px;
+}
+#home .container .photo:hover img{
+    transform: scale(1.05) translateY(-2.5%);
+}
+#home .container .socialNetworks > *{
+    display: block;
+    font-size: 5rem;
+    width: 5rem;
+    height: 5rem;
+    margin-block: 3.5rem;
+    transition: transform 0.2s;
+}
+#home .container .socialNetworks > * img{
+    width: 100%;
+}
+#home .container .socialNetworks > *:hover{
+    color: #f4edd9;
+    filter: invert(55%) sepia(59%) saturate(386%) hue-rotate(127deg) brightness(101%) contrast(90%);
+    transform: scale(1.2);
+    
+}
+
+
+
+section.scrolling{
+    text-transform: uppercase;
+    position: relative;
+    background: #44b4ac;
+    overflow: hidden;
+    min-height: 200px;
+    display: flex;
+    align-items: center;
+
+}
+.scrolling > div{
+    display: flex;
+    color: #f4edd9;
+    animation: scrolling 15s linear infinite;
+    position: absolute;
+    height: 100%;
+    align-items: center;
+    padding-top: 1rem;
+}
+.scrolling h2{
+    font-size: 8rem;
+    margin-inline: 3rem;
+    height: fit-content;
+}
+.scrolling div.rotate{
+    display: block;
+    font-size: 12rem;
+    animation: rotate 2s infinite linear;
+    width: 200px;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform-origin: center;
+}
+.scrolling#scrolling div.rotate{
+    color: black;
+}
+.scrolling img{
+    width: 150px;
+    display: block;
+    margin-inline: 3rem;
+}
+
+
+#about{
+    background: url("../../imgs/backgrounds/background_light_top_bis.png") top;
+    background-size: cover;
+    position: relative;
+}
+@media screen and (max-width: 850px) {
+    #about{
+        background: none;
+        background-size: cover;
+    }
+}
+#about .container{
+    display: flex;
+    align-items: center;
+}
+#about .container .photo{
+    flex-basis: 35%;
+    align-self: flex-end;
+}
+@media screen and (max-width: 1000px) {
+    #about .container .photo{
+        display: none;
+    }  
+}
+#about .container .photo img{
+    width: 100%;
+}
+#about .container .text{
+    text-align: right;
+    flex-basis: 65%;
+}
+@media screen and (max-width: 1000px) {
+    #about .container .text{
+        flex-basis: 100%;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+    }  
+}
+#about .container .text h1{
+    margin: 0;
+}
+#about .container .text p{
+    font-size: 4rem;
+    white-space: normal;
+    margin-top: 5rem;
+    margin-bottom: 8rem;
+    font-weight: bold;
+}
+#about .container .text a{
+    margin-right: 0;
+    margin-left: auto;
+}
+@media screen and (max-width: 1000px){
+    #about .container .text a{
+        margin-inline: auto;
+    }
+
+}
+
+
+
+#services {
+    background: url("../../imgs/backgrounds/background_light_bottom_bis.png") bottom;
+    background-size: cover;
+}
+@media screen and (max-width: 850px) {
+    #services {
+        background: url("../../imgs/backgrounds/background_light_bottom_bis_mobile.png") bottom;
+        background-size: cover;
+    }
+}
+#services h1{
+    width: fit-content;
+    display: inline-block;
+    margin: 0;
+}
+#services h2{
+    width: fit-content;
+    display: inline-block;
+    font-size: 2.5rem;
+    margin-left: 3rem;
+    margin-block: 1rem;
+}
+@media screen and (max-width: 1100px){
+    #services h2{
+        display: block;
+        margin-left: 0;
+    }
+}
+#services .container .cards{
+    display: flex;
+    position: relative;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    margin-block: 5rem;
+}
+#services .container .cards button{
+    background: black;
+    color: #f4edd9;
+    border: none;
+    font-size: 7rem;
+    display: block;
+    width: 6rem;
+    height: 6rem;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+#services .container .cards .wrapper{
+    overflow: hidden;
+}
+#services .container .cards #caroussel{
+    display: flex;
+    transition: all 0.2s;
+}
+#services .container .cards #caroussel .card{
+    aspect-ratio: 9/10;
+    min-width: 33%;
+    max-width: 33%;
+    height: auto;
+}
+@media screen and (max-width: 1000px){
+    #services .container .cards #caroussel .card{
+        min-width: 50%;
+        max-width: 50%;
+    }
+    
+}
+#services .container .cards #caroussel .card > div{
+    aspect-ratio: 3/4;
+    width: 75%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 20px;
+    border: solid #f4edd9 3px;
+    margin-inline: auto;
+    position: relative;
+    transition: all 0.2s;
+    border: solid #f4edd9 3px;
+}
+#services .container .cards #caroussel .card a{
+    display: flex;
+    position: absolute;
+    font-size: 5rem;
+    width: 6rem;
+    height: 6rem;
+    background-color: #f4edd9;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100%;
+    bottom: -3rem;
+    right: 20px;
+    transition: all 0.2s;
+    transform: scale(0);
+}
+#services .container .cards #caroussel .card:hover a{
+    transform: scale(1);
+    
+}
+#services .container .cards #caroussel .card:hover > div a:hover{
+    background-color: #44b4ac;
+    color: #f4edd9;
+}
+
+#services .container .cards #caroussel .card h3{
+    width: 90%;
+    font-family: Jost;
+    text-transform: uppercase;
+    font-size: 2.2rem;
+    letter-spacing: 3px;
+    text-align: center;
+    margin-inline: auto;
+    hyphens: auto;
+    word-break: break-word;
+}
+#services .container .cards #caroussel .card p{
+    font-size: 2rem;
+    padding-inline: 2rem;
+    white-space: normal;
+    margin: 0;
+
+}
+#services .container .cards #caroussel .card:hover > div{
+    background-color: #44b4ac;
+    box-shadow: #2d7570 14px 22px;
+}
+#services .container .cards #caroussel .card:hover > div a{
+    color: rgba(68, 180, 173, 1);
+}
+#services .container .cards #caroussel .card > div{
+    background-color: black;
+    color: #f4edd9;
+    box-shadow: #909494 18px 25px;
+}
+
+#services .container > a.button{
+    margin-inline: auto;
+    margin-block: 5rem;
+    padding-inline: 8rem;
+
+}
+
+#numbers{
+    background-color: black;
+    padding-block: 1rem;
+    font-weight: bold;
+}
+#numbers .container .rotate_3d{
+    width: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+#numbers .container .rotate_3d:first-child{
+    animation: rotate-3d infinite linear 2s;
+}
+#numbers .container .rotate_3d:last-child{
+    animation: rotate-3d infinite linear 2s reverse;
+}
+#numbers .container .rotate_3d img{
+    aspect-ratio: 1/1;
+    width: 50%;
+    padding: 10%;
+    height: auto;
+    object-fit: contain;
+    filter: invert(55%) sepia(59%) saturate(386%) hue-rotate(127deg) brightness(101%) contrast(90%);
+}
+@keyframes rotate-3d {
+    to{
+        transform: rotate3d(0,1,0,360deg);
+    }
+    
+}
+#numbers .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #f4edd9;
+}
+
+#numbers .container .rotate{
+    font-size: 15rem;
+    color: #44b4ac;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: rotate 2s linear infinite;
+    transform-origin: center;
+    width: 150px;
+    height: 150px;
+}
+@keyframes rotate {
+   to{
+    transform: rotateZ(360deg);
+   }
+    
+}
+#numbers .container .number strong, #numbers .container .number em{
+    display: block;
+}
+#numbers .container .number{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#numbers .container .number strong{
+    font-size: 2.5rem;
+    font-style: italic;
+    letter-spacing: 5px;
+    border: solid #f4edd9 3px;
+    border-radius: 20px;
+    box-shadow: #f4edd9 18px 15px;
+    width: 175px;
+    padding-block: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    background-color: #44b4ac;
+    color: white;
+}
+#numbers .container .number em{
+    text-transform: uppercase;
+    font-size: 2rem;
+    font-style: normal;
+    margin-top: 3rem;
+    letter-spacing: 3px;
+}
+
+#works{
+    background: url("../../imgs/backgrounds/background_light_top.png") top, url("../../imgs/backgrounds/background_light_bottom.png") bottom;
+    background-size: cover;
+}
+@media screen and (max-width: 850px) {
+    #works{
+        background: url("../../imgs/backgrounds/background_light_top_mobile.png") top, url("../../imgs/backgrounds/background_light_bottom_mobile.png") bottom;
+        background-size: cover;
+    }
+}
+#works .container h1,h2{
+    margin: 0;
+}
+#works .container h2{
+    font-size: 2.5rem;
+    margin-block: 5rem;
+    text-align: center;
+}
+#works .container h1 + h2{
+    margin-block: 1rem;
+}
+#works input[type="radio"]{
+    display: none;
+}
+#works .container .projects nav{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-block: 8rem;
+    flex-wrap: wrap;
+    font-weight: bold;
+}
+#works .container .projects nav label{
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    display: block;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.5s;
+    border-radius: 20px;
+    padding-block: 1rem;
+    border: solid #f4edd900 3px;
+    margin-block: 1rem;
+    margin-inline: 1rem;
+}
+@media screen and (min-width: 850px) {
+    #works .container .projects nav label.active{
+        background-color: #44b4ac;
+        color: #f4edd9;
+        padding: 1rem 2rem;
+        border-color: black;
+        box-shadow: black 8px 5px;
+    }
+    
+}
+
+#works .container .projects .works{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+#works .container .projects .work{
+    flex-basis: 27.5%;
+    position: relative;
+    box-shadow: #909494 18px 25px;
+    border-radius: 20px;
+    margin-bottom: 10rem;
+    transition: all 0.2s;
+
+
+}
+#works .container .projects .work img{
+    aspect-ratio: 1/1;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 20px;
+}
+#works .container .projects .work .info{
+    aspect-ratio: 1/1;
+    width: 100%;
+    height: auto;
+    background-color: #44b4ac;
+    border-radius: 20px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: all 0.2s;
+    opacity: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+#works .container .projects .work:hover .info{
+    opacity: 1;
+}
+#works .container .projects .work:hover{
+    box-shadow: #2d7570 16px 20px;
+    
+}
+#works .container .projects .work .info h3{
+    font-family: Jost;
+    text-align: center;
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    position: relative;
+    margin-bottom: 0;
+    height: 10%;
+    text-decoration: underline;
+    text-decoration-color: #ac9167;
+    text-decoration-thickness: 3px;
+    text-underline-offset: 2px;
+}
+#works .container .projects .work .info p{
+    font-size: 2rem;
+    letter-spacing: 3px;
+    padding-inline: 2rem;
+    align-self: center;
+    margin: auto;
+    height: 75%;
+    overflow-y: hidden;
+}
+#works .container .projects input:not(:checked) + .works{
+    display: none;
+}
+#works .container .projects .work .info a{
+    display: flex;
+    position: absolute;
+    font-size: 5rem;
+    width: 6rem;
+    height: 6rem;
+    background-color: #f4edd9;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100%;
+    bottom: -3rem;
+    right: 20px;
+    transition: all 0.2s;
+    color: black;
+    
+}
+#works .container .projects .work .info a:hover{
+    background-color: black;
+    color: #f4edd9;
+}
+#works .container .projects .work:empty{
+    background-color: #44b4ac;
+}
+#works .container > a{
+    margin-inline: auto;
+    padding-inline: 8rem;
+}
+
+
+#partners > div:hover{
+    animation-play-state: paused;
+}
+#partners > div img{
+    transition: transform 0.2s;
+    filter: brightness(0);
+}
+#partners > div img:hover{
+    transform: scale(1.05);
+    filter: brightness(1);
+    
+    
+}
+
+#contact{
+    background: url("../../imgs/backgrounds/background_light_top_bis.png") top, url("../../imgs/backgrounds/background_light_bottom_bis.png") bottom;
+    background-size: cover;
+}
+@media screen and (max-width: 850px) {
+    #contact{
+        background: url("../../imgs/backgrounds/background_light_top_bis_mobile.png") top, url("../../imgs/backgrounds/background_light_bottom_bis_mobile.png") bottom;
+        background-size: cover;
+    }
+}
+#contact h1, #contact h2{
+    margin: 0;
+}
+#contact h2{
+    font-size: 2.5rem;
+}
+#contact .container > div{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 5rem;
+}
+#contact .container > div .contact_infos{
+    flex-basis: 50%;
+}
+#contact .container > div .contact_infos img{
+    aspect-ratio: 1/1;
+    width: 30px;
+    height: auto;
+    background-color: #44b4ac;
+    object-fit: contain;
+    padding: 1rem;
+    border-radius: 100%;
+    border: solid #f4edd9 3px;
+    box-shadow: black 5px 3px;
+    margin-right: 3rem;
+    border: solid black 3px;
+}
+
+#contact .container > div .contact_infos h3{
+    text-transform: uppercase;
+    font-family: Jost;
+    color: black;
+    font-size: 2rem;
+}
+#contact .container > div .contact_infos > div{
+    display: flex;
+    margin-block: 3rem;
+}
+#contact .container > div .contact_infos p{
+    font-size: 1.8rem;
+}
+#contact form{
+    flex-basis: 50%;
+}
+#contact form label{
+    text-transform: uppercase;
+    font-family: Jost;
+    color: black;
+    font-size: 2rem;
+    display: block;
+    font-weight: bold;
+
+}
+#contact form label:after{
+    display: inline-block;
+    content: " *";
+    color: #44b4ac;
+    transform: translateY(-10px);
+    margin-left: 1rem;
+}
+#contact form > div{
+    display: flex;
+    justify-content: space-between;
+}
+#contact form > div > div{
+    flex-basis: 45%;
+}
+
+#contact form input, #contact form textarea{
+    width: 100%;
+    padding: 1rem;
+    outline: none;
+    border: none;
+    border-radius: 30px;
+    font-size: 2rem;
+    margin-bottom: 3.5rem;
+    margin-top: 1.5rem;
+    background-color: #f4edd9;
+    border: solid black 3px;
+}
+#contact form textarea{
+    border-radius: 15px;
+    resize: vertical;
+}
+#contact form .send{
+    justify-content: flex-end;
+    align-items: center;
+    margin-block: 2rem;
+}
+#contact form .send p{
+    font-size: 1.5rem;
+    margin-right: 5rem;
+}
+#contact form .send p::before{
+    display: inline-block;
+    content: " *";
+    transform: translateY(-10px);
+    margin-right: 1rem; 
+}
+
+#works #computer{
+    border-bottom: solid black 3px;
+    width: fit-content;
+    margin-inline: auto;
+    padding: 2rem;
+}
+#works #phone{
+    display: none;
+    
+}
+@media screen and (max-width: 850px) {
+    #numbers .container .rotate_3d{
+        display: none;
+    }
+    #home .container .text div *{
+        margin-inline: 0;
+    }
+
+    #home .container{
+        flex-direction: column;
+    }
+    #home #video video{
+        width: 100%;
+    }
+    #home .container .text{
+        display: block;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        text-align: center;
+    }
+    #home .container .text p{
+        margin-inline: auto;
+        font-size: 2.5rem;
+    }
+    #home .container .text h1{
+        font-size: 15rem;
+        text-align: center;
+        margin-block: 1rem;
+    }
+    #home .container .text h2{
+        font-size: 2.5rem;
+        text-align: center;
+    }
+    #home .container .text div{
+        flex-direction: column;
+        align-items: center;
+    }
+    #home .container .text div a{
+        margin-block: 2rem;
+    }
+    #home .container .photo{
+        display: block;
+        width: 60%;
+        margin-top: 8rem;
+    }
+    #home .container .photo:after{
+        box-shadow: black 10px 8px;   
+    }
+    #home .container .socialNetworks{
+        display: flex;
+        width: 50%;
+        justify-content: space-between;
+        margin-block: 5rem;
+    }
+    section.scrolling{
+        min-height: 150px;
+    }
+    section.scrolling div.rotate{
+        font-size: 10rem;
+    }
+    .scrolling h2{
+        font-size: 8rem;
+    }
+    #about .container .text p{
+        font-size: 2.5rem;
+        margin-bottom: 3rem;
+    }
+    #about .container .text a{
+        margin-bottom: 3rem;
+    }
+    #services h1{
+        display: block;
+        width: auto;
+    }
+    #services h2{
+        display: block;
+        text-align: center;
+        font-size: 2.5rem;
+        width: 100%;
+    }
+    #services .container .cards #caroussel .card h3{
+        font-size: 2rem;
+    }
+    #services .container .cards{
+        flex-direction: column;
+        align-items: center;
+    }
+    #services .container .cards button{
+        display: none;
+    }
+    #services .container .cards #caroussel{
+        flex-direction: column;
+        align-items: center;
+    }
+    #services .container .cards #caroussel .card{
+        width: 85%;
+        max-width: 300px;
+        margin-block: 3rem;
+        margin-inline: auto;
+    }
+    #services .container .cards #caroussel .card:nth-child(odd) > div{
+        background-color: #44b4ac;
+        box-shadow: #2d7570 14px 20px;
+        border: solid black 3px;
+
+    }
+    #services .container .cards #caroussel .card:nth-child(even) > div{
+        background-color: black;
+        box-shadow: #909494 14px 20px;
+
+    }
+    #services .container .cards #caroussel .card:nth-child(odd) a{
+        transform: scale(1);
+        color: rgba(68, 180, 173, 1);
+    }
+    #services .container .cards #caroussel .card:nth-child(even) a{
+        transform: scale(1);
+        color: black;
+    }
+    #numbers .container{
+        flex-direction: column;
+        align-items: center;
+    }
+    #numbers .container .rotate{
+        display: none;
+    }
+    #numbers .container .number{
+        margin-block: 3rem;
+    }
+    #works .container h2{
+        text-align: center;
+        font-size: 2.5rem;
+    }
+    #works .container .projects nav#computer{
+        display: none;
+    }
+    #works .container .projects nav label{
+        text-align: left;
+        margin-inline: 0;
+    }
+    #works .container .projects .works{
+        flex-direction: column;
+        flex-basis: 60%;
+        flex-wrap: nowrap;
+    }
+    #works .container .projects .work{
+        width: 70%;
+        max-width: 300px;
+        margin-inline: auto;
+        box-shadow: #909494 10px 8px;
+    }
+    #works .container .projects .work:empty{
+        width: 70%;
+        max-width: 300px;
+        aspect-ratio: 1/1;
+        height: auto;
+        margin-inline: auto;
+    }
+    #works .container .projects .work .info{
+        opacity: 1;
+        background: none;
+    }
+    #works .container .projects .work .info > *:not(a){
+        opacity: 0;
+    }
+    #works .container > a{
+        margin-block: 3rem;
+    }
+    #works .container .projects #phone{
+        display: block;
+        position: relative;
+        margin-top: 3rem;
+    }
+    #works .container .projects #phone span{
+        display: block;
+        width: fit-content;
+        text-align: center;
+        margin-inline: auto;
+        text-transform: uppercase;
+        font-size: 2rem;
+        margin-bottom: 5rem;
+        display: flex;
+        align-items: center;
+        font-weight: bold;
+       
+    }
+    #works .container .projects #phone span:after{
+        content: "❱";
+        display: inline-block;
+        margin-left: 1rem;
+        font-size: 1.5rem;
+        transition: all 0.2s;
+    }
+    #works .container .projects #phone nav{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: absolute;
+        transform: translate(-50%,0) scaleY(0);
+        left: 50%;
+        top: -5rem;
+        background-color: #f4edd9;
+        z-index: 2;
+        width: 100vw;
+        padding-top: 3rem;
+        transform-origin: top;
+        transition: all 0.5s;
+        border-radius: 20px;
+
+    }
+    #works .container .projects #phone.active nav{
+        transform: translate(-50%,0) scaleY(1);
+    }
+    #works .container .projects #phone.active span:after{
+        transform: rotate(90deg);
+    }
+    .scrolling img{
+        width: 90px;
+    }
+    #contact h2{
+        text-align: center;
+        font-size: 2.5rem;
+        margin-top: 1rem;
+    }
+    #contact .container > div{
+        flex-direction: column;
+        margin-block: 5rem;
+    }
+    #contact .container > div .contact_infos{
+        margin-block: 3rem;
+    }
+    #contact form > div{
+        flex-direction: column;
+    }
+    #contact form{
+        width: 75%;
+        margin-block: 3rem;
+    }
+
+    
+    
+}

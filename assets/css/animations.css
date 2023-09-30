@@ -1,0 +1,175 @@
+section:not(#home) h1{
+    opacity: 0;
+}
+body{
+    max-width: 100vw;
+    height: fit-content;
+    overflow-x: hidden;
+}
+#home .text h1{
+    animation: slide-in 1s forwards;
+}
+@keyframes slide-in{
+    from{
+        transform: translateX(-100vw);
+    } to {
+        transform: translateX(0);
+    }
+}
+#home .photo img{
+    animation: get-up 0.5s 0.5s forwards;
+    transform-origin: bottom;
+    transform: scale(0);
+}
+@keyframes get-up {
+    from{
+        transform: scale(0);
+    }
+    to{
+        transform: scale(1);
+    }
+
+}
+
+
+#resume div.exp{
+    transition: all 0.5s;
+    
+}
+#resume div.exp h3{
+    transition: all 0.5s 0.5s;
+}
+#resume div.animated{
+    transform-origin: top;
+    transform: scaleY(0);
+    opacity: 0;
+}
+#resume div.animated h3{
+    opacity: 0;
+    transform: translateX(30px);
+}
+
+#about div.photo{
+    transform: translateX(-100vw);
+}
+#about div.photo:not(.animated){
+    animation: slide-in 0.5s forwards;
+}
+@keyframes fade-in-up {
+    from{
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+    
+}
+#about p{
+    opacity: 0;
+}
+#about p:not(.animated){
+    animation: fade-in-up 0.5s forwards;
+}
+
+#services #caroussel .card:nth-child(1),#services #caroussel .card:nth-child(2),#services #caroussel .card:nth-child(3){
+    opacity: 0;
+}
+
+#services #caroussel:not(.animated) .card:nth-child(1){
+    animation: fade-in-up 0.2s forwards;
+}
+#services #caroussel:not(.animated) .card:nth-child(2){
+    animation: fade-in-up 0.2s 0.1s forwards;
+}
+#services #caroussel:not(.animated) .card:nth-child(3){
+    animation: fade-in-up 0.2s 0.2s forwards;
+}
+#works div.works.animated{
+    transform: translateX(-100vw);
+}
+#works div.works:not(.animated){
+    animation: slide-in 1s forwards;
+}
+
+#presentation .text{
+    animation: fade-in-up 1s forwards;
+}
+
+@keyframes slide-out {
+    from{
+        transform: translateX(0);
+    }
+    to{
+        transform: translateX(100vw);
+    }
+    
+}
+
+#presentation .photo{
+    animation: slide-out forwards 2s reverse;
+}
+
+#skills .container > div:not(.animated){
+    animation: fade-in-up 1.5s forwards;
+}
+#skills .container > div.animated{
+    opacity: 0;
+}
+
+#service .container div:nth-child(odd):not(.animated){
+    animation: slide-in 0.5s forwards;
+}
+#service .container div:nth-child(even):not(.animated){
+    animation: slide-out 0.5s forwards reverse;
+}
+#service .container div.animated{
+    visibility: hidden;
+}
+
+#legal p:not(.animated){
+    animation: fade-in-up 0.5s forwards;
+}
+#legal p.animated{
+    opacity: 0;
+}
+
+#work #thumbnail{
+    animation: slide-in 1s forwards;
+}
+#work #infos{
+    animation: slide-out 1s reverse forwards;
+}
+
+#work #infos p:nth-child(2){
+    animation: fade-in-up 0.5s 1s forwards;
+    opacity: 0;
+}
+#work #infos p:nth-child(3){
+    animation: fade-in-up 0.5s 1.25s forwards;
+    opacity: 0;
+}
+#work #infos p:nth-child(4){
+    animation: fade-in-up 0.5s 1.5s forwards;
+    opacity: 0;
+}
+
+#loader{
+    background-color: black;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#loader video{
+    width: 300px;
+}
+#loader ~ *{
+    display: none;
+}

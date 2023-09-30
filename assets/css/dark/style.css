@@ -1,0 +1,453 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@font-face {
+    font-family: Nickels;
+    src: url("../../fonts/Nickels.ttf") format("truetype");
+}
+@font-face {
+    font-family: Tumb;
+    src: url("../../fonts/Tumb-Regular.ttf") format("truetype");
+}
+@font-face {
+    font-family: Boldenvan;
+    src: url("../../fonts/BoldenVan.ttf") format("truetype");
+}
+@font-face {
+    font-family: Chitown;
+    src: url("../../fonts/Chitown.ttf") format("truetype");
+}
+@font-face {
+    font-family: theQuest;
+    src: url("../../fonts/TheQuest.ttf") format("truetype");
+}
+section:not(.scrolling,:first-child){
+    padding-block: 5rem;
+}
+::selection{
+    background-color: #44b4ac;
+    color: #f4edd9;
+}
+h1::selection{
+    color: black;
+}
+html{
+    font-size: 62.5%;
+    font-family: Jost;
+}
+body{
+    color: #f4edd9;
+    background-color: black;
+}
+div.container{
+    max-width: 1280px;
+    padding-inline: 5rem;
+    margin-inline: auto;
+}
+h1{
+    font-family: Nickels;
+    letter-spacing: 8px;
+    font-size: 12rem;
+    -webkit-text-stroke-color: #f4edd9;
+    -webkit-text-stroke-width: 1px;
+    color: #44b4ac;
+    height: fit-content;
+    text-shadow: #f4edd9 8px 8px;
+    text-transform: uppercase;
+}
+h2,h3,h4,h5{
+    font-family: Tumb;
+}
+a{
+    display: inline-block;
+    color: inherit;
+    text-decoration: none;
+}
+a.button, button.button{
+    text-transform: uppercase;
+    display: block;
+    background-color: #f4edd9;
+    color: black;
+    font-size: 2rem;
+    padding: 1rem 3rem;
+    border-radius: 30px;
+    box-shadow: #44b4ac 12px 8px;
+    border: solid black 3px;
+    transition: all 0.2s;
+    width: fit-content;
+    font-weight: bold;
+}
+a.button:hover, button.button:hover, a.button:active, button.button:active{
+    box-shadow: #44b4ac 5px 3px;
+    cursor: pointer;
+
+}
+section:first-child{
+    padding-top: 200px;
+}
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 3;
+    background: url("../../imgs/backgrounds/header_dark.png") black;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: bold;
+    
+}
+header nav{
+    display: flex;
+    text-transform: uppercase;
+    margin-right: 5rem;
+    padding-block: 3.5rem;
+    align-items: center;
+    flex-wrap: wrap;
+}
+header nav > a:nth-last-child(1){
+    margin-left: 1rem;
+}
+header a#logo img{
+    width: 70px;
+    margin-left: 5rem;
+}
+@media screen and (max-width: 1100px) {
+    header a#logo{
+        display: none;
+    }
+    header{
+        justify-content: flex-end;
+    }
+    
+}
+
+header nav > a , header nav .undermenu > a{
+    font-size: 2rem;
+    margin-left: 3rem;
+    position: relative;
+    z-index: 3;
+    border-radius: 30px;
+    transition: all 0.5s;
+    padding-block: 0.5rem;
+    border: solid black 3px;
+}
+#lang{
+    margin-left: 8rem;
+}
+#lang, #mode{
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    align-items: center;
+    cursor: pointer;
+    
+}
+#mode{
+    margin-left: 1rem;
+    
+}
+#lang a, #mode a{
+    display: block;
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    padding-top: 2rem;
+    opacity: 0;
+    transition: top 0.5s, opacity 0.5s;
+}
+#mode img{
+    width: 25px;
+    filter: brightness(0) saturate(100%) invert(96%) sepia(9%) saturate(691%) hue-rotate(324deg) brightness(103%) contrast(91%);
+}
+#lang a:hover{
+    color: #44b4ac;
+}
+#mode a:hover{
+    filter: invert(55%) sepia(59%) saturate(386%) hue-rotate(127deg) brightness(101%) contrast(90%);
+}
+#lang i, #mode i{
+    transition: all 0.2s;
+}
+#lang:hover i, #mode:hover i{
+    transform: rotateZ(90deg);
+}
+
+#lang:hover a, #mode:hover a{
+    top: 100%;
+    opacity: 1;
+}
+@media screen and (max-width: 1000px){
+    header nav > a , header nav .undermenu > a, #lang{
+        font-size: 1.8rem;
+    }
+    
+}
+
+
+header nav > a:not(#contactButton):hover, header nav .undermenu:hover > a{
+    background-color: #44b4ac;
+    padding-inline: 3rem;
+
+}
+header nav .undermenu {
+    position: relative;
+    width: fit-content;
+}
+header nav .undermenu div{
+    display: flex;
+    flex-direction: column;
+    font-size: 1.5rem;
+    text-align: center;
+    position: absolute;
+    left: 3rem;
+    top: 3rem;
+    transform: scaleY(0);
+    background-color: #f4edd9;
+    color: #44b4ac;
+    padding-block: 3rem;
+    border-radius: 15px;
+    transform-origin: top;
+    width: calc(100% - 3rem);
+}
+header nav .undermenu div a{
+    display: block;
+    padding: 1.5rem 1rem;
+}
+header nav .undermenu:hover div{
+    transform: scaleY(1);
+    transition: all 0.5s;
+    transition-delay: 0.5s;
+}
+header nav .undermenu div a:hover{
+    color: #f4edd9;
+    background-color: #44b4ac;
+    border-block: solid black 2px;
+}
+header nav a#contactButton{
+    font-size: 1.5rem;
+}
+footer{
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    padding-top: 3em;
+    background: url("../../imgs/backgrounds/footer_dark.png") black;
+    background-size: cover;
+    background-position: center;
+}
+footer h2{
+    font-family: Jost;
+    font-size: 2rem;
+    color: #44b4ac;
+    margin-bottom: 3rem;
+    text-align: center;
+}
+footer h2 a:hover{
+    color: #f4edd9;
+}
+footer .container{
+    display: flex;
+    justify-content: space-between;
+}
+footer .container > div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+footer .container > div > a{
+    display: block;
+    margin-bottom: 1rem;
+    font-size: 1.8rem;
+    transition: all 0.5s;
+    border-radius: 20px;
+    padding-inline: 2rem;
+}
+
+footer .container > div > a:hover{
+    padding: 1rem 2rem;
+    background-color: #44b4ac;
+}
+footer .container > div .social_networks{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+footer .container > div .social_networks > *{
+    font-size: 3rem;
+    width: 2.5rem;
+    height: 2.5rem;
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f4edd9;
+    color: black;
+    border-radius: 100%;
+    border: solid black 3px;
+    box-shadow: #44b4ac 5px 3px;
+    transition: all 0.2s;
+    margin-inline: 1rem;
+}
+footer .container > div .social_networks > * img{
+    width: 100%;
+}
+footer .container > div .social_networks > *:hover{
+    box-shadow: #44b4ac 0px 0px;
+}
+footer em{
+    display: block;
+    text-align: center;
+    text-transform: none;
+    font-size: 1.5rem;
+    margin-top: 3rem;
+    font-style: normal;
+    padding-bottom: 3rem;
+}
+header #burger{
+    display: none;
+}
+@media screen and (max-width: 850px) {
+    html{
+        overflow-x: hidden;
+    }
+    header a#logo{
+        display: block;
+    }
+    #lang, #mode{
+        font-size: 2.5rem;
+        margin-left: 0;
+        margin-top: 5rem;
+        display: flex;
+        align-items: center;
+    }
+    #lang a, #mode a{
+        position: static;
+        opacity: 1;
+        padding-top: 0;
+        color: #44b4ac;
+    }
+    #mode{
+        margin-top: 3rem;
+    }
+    #mode a{
+        filter: invert(55%) sepia(59%) saturate(386%) hue-rotate(127deg) brightness(101%) contrast(90%);
+    }
+    html{
+        font-size: 45%;
+    }
+    header{
+        display: flex;
+        justify-content: space-between;  
+        align-items: center;
+        padding-block: 2rem;
+    }
+    a.button, button.button{
+        font-size: 1.5rem;
+        box-shadow: #44b4ac 8px 6px;
+    }
+    div.container{
+        padding-inline: 2rem;
+    }
+    header #burger{
+        display: block;
+        background: none;
+        position: relative;
+        border: none;
+        width: 30px;
+        height: 3px;
+        background-color: #f4edd9;
+        transform: translate(-50%,-50%);
+        margin-right: 3rem;
+    }
+    header #burger::before{
+        content: "";
+        position: absolute;
+        top: -8px;
+        left: 0;
+        width: 30px;
+        height: 3px;
+        background-color: #f4edd9;
+        transition: all 0.5s;
+    }
+    header #burger::after{
+        content: "";
+        position: absolute;
+        bottom: -8px;
+        left: 0;
+        width: 30px;
+        height: 3px;
+        background-color: #f4edd9;
+        transition: all 0.5s;
+
+    }
+    header nav{
+        position: fixed;
+        top: 0;
+        left: 0;
+        background-color: black;
+        min-width: 100vw;
+        min-height: 100vh;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        transition: all 0.5s;
+        transform-origin: right;
+        backdrop-filter: brightness(0);
+    }
+    header a#logo img{
+        width: 50px;
+        margin-left: 3rem;
+
+    }
+    header nav.hidden{
+        transform: scaleX(0);
+    }
+    header nav > a , header nav .undermenu > a{
+        margin-left: 0;
+        margin-block: 2rem;
+        font-size: 2.5rem;
+    }
+    header nav > a#contactButton{
+        font-size: 2.5rem;
+    }
+    header nav > a:nth-child(1){
+        margin-top: 0;
+    }
+    nav:not(.hidden) + #burger{
+        background-color: rgba(255, 255, 255, 0);
+    }
+    nav:not(.hidden) + #burger::after{
+        bottom: 0;
+        transform: rotate(45deg);
+    }
+    nav:not(.hidden) + #burger::before{
+        top: 0;
+        transform: rotate(-45deg);
+    }
+    h1{
+        font-size: 8.5rem;
+        text-align: center;
+        letter-spacing: 0px;
+        text-shadow: #f4edd9 3px 3px;
+    }
+    footer .container{
+        flex-direction: column;
+    }
+    footer .container > div{
+        margin-block: 3rem;
+    }
+    footer .container > div .social_networks{
+        width: 200px;
+    }
+    section:first-child{
+        padding-top: 150px;
+    }
+    
+    
+}
+

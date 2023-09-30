@@ -1,0 +1,64 @@
+main .container h1{
+    text-align: center;
+    margin-top: 0;
+}
+main .container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+main .container form{
+    display: flex;
+    flex-direction: column;
+    max-width: 1000px;
+    margin-inline: auto;
+    width: 75%;
+}
+main .container form input[type="text"], main .container form input[type="password"], main .container form textarea, main .container form select, main .container form option, main .container form input[type="url"], main .container form input[type="file"], main .container form input[type="number"]{
+    padding: 1rem;
+    font-size: 2rem;
+    outline: none;
+    border: none;
+    border-radius: 30px;
+    margin-bottom: 3rem;
+    resize: vertical;
+    width: 100%;
+    background-color: #f4edd9;
+    border: solid black 3px;
+}
+main .container form label{
+    text-transform: uppercase;
+    font-size: 2.5rem;
+    display: block;
+    margin-block: 1rem;
+}
+main .container form button{
+    margin-block: 5rem;
+    margin-inline: auto;
+}
+main .container a{
+    margin-bottom: 3rem;
+}
+#works .work > a{
+    margin-inline: auto;
+    position: absolute;
+    font-size: 1.5rem;
+    left: 0;
+    transform: translate(0,-100%);
+    top: 100M;
+    box-shadow: none;
+    border-radius: 0;
+    border-bottom-left-radius: 20px;
+    padding-inline: 1rem;
+}
+#works .work > a:hover{
+    background-color: #44b4ac;
+    color: white;
+    border-color: #f4edd9;
+    
+}
+
+#partners > div img:hover{
+    transform: scale(0.95);
+    filter: brightness(0) saturate(100%) invert(12%) sepia(88%) saturate(7337%) hue-rotate(360deg) brightness(111%) contrast(110%);
+}

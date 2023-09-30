@@ -1,0 +1,50 @@
+section{
+    background: url("../../../imgs/backgrounds/background_dark_top.png") top, url("../../../imgs/backgrounds/background_dark_bottom.png") bottom;
+    background-size: cover;
+}
+@media screen and (max-width: 850px) {
+    section{
+        background: url("../../../imgs/backgrounds/background_dark_top_mobile.png") top, url("../../../imgs/backgrounds/background_dark_bottom_mobile.png") bottom;
+        background-size: cover;
+    }  
+}
+section h1{
+    text-align: center;
+    margin: 0;
+}
+section h2{
+    font-size: 2.5rem;
+    text-align: center;
+    text-transform: uppercase;
+    color: #f4edd9;
+    margin-top: 2rem;
+}
+section p{
+    font-size: 2rem;
+    text-align: justify;
+    margin-bottom: 3rem;
+}
+section ol li{
+    color: #44b4ac;
+    font-size: 3.5rem;
+    font-weight: bold;
+}
+section ol{
+    margin-block: 5rem;
+}
+section h3{
+    font-family: Jost;
+    font-size: 4rem;
+    color: #44b4ac;
+    margin-bottom: 0;
+}
+
+@media screen and (max-width: 850px) {
+    section h2{
+        font-size: 2.5rem;
+    }
+    section p{
+        margin-inline: 2rem;
+    }
+    
+}

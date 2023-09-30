@@ -1,0 +1,348 @@
+section h1{
+    text-align: center;
+    margin-bottom: 0;
+    margin-top: 0;
+}
+section h2{
+    text-align: center;
+    font-size: 2.5rem;
+}
+section{
+    padding-bottom: 8rem;
+}
+
+#presentation{
+    background: url("../../../imgs/backgrounds/background_light_top_bis.png") top;
+    background-size: cover;
+}
+@media screen and (max-width:850px) {
+    #presentation{
+        background: url("../../../imgs/backgrounds/background_light_top_bis_mobile.png") top;
+        background-size: cover;
+    }
+}
+#presentation .container > div{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 5rem;
+}
+#presentation .container div .text{
+    flex-basis: 70%;
+}
+#presentation .container div .text p{
+    font-size: 2rem;
+    text-align: justify;
+}
+#presentation .container .photo{
+    aspect-ratio: 3/4;
+    width: 20%;
+    background-color: #44b4ac;
+    border-radius: 20px;
+    position: relative;
+    box-shadow: black 25px 25px;
+   
+}
+#presentation .container .photo img{
+    width: 90%;
+    height: 110%;
+    object-fit: contain;
+    object-position: top;
+    display: block;
+    margin-inline: auto;
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    transition: all 0.2s;
+}
+#presentation .container .photo:hover{
+    background-color: black;
+    box-shadow: #44b4ac 25px 25px;
+}
+#presentation .container .photo:hover img{
+    height: 115%;
+}
+
+#skills{
+    background-size: 100% 100%;
+    background-position: center;
+}
+#skills input{
+    display: none;
+}
+#skills nav{
+    display: flex;
+    justify-content: center;
+    margin-block: 5rem;
+}
+#skills nav label{
+    font-size: 2rem;
+    text-transform: uppercase;
+    display: block;
+    margin-inline: 2rem;
+    cursor: pointer;
+    border: solid #f4edd900 3px;
+    transition: all 0.5s;
+    padding-block: 1rem;
+    border-radius: 30px;
+    font-weight: bold;
+}
+#skills nav label.active{
+    background-color: #44b4ac;
+    color: #f4edd9;
+    padding: 1rem 2rem;
+    box-shadow: black 12px 8px;
+    border-color: black;
+}
+#skills input:not(:checked) + div{
+    display: none;
+}
+#skills .container > div{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+#skills .container > div h3{
+    font-family: Jost;
+    font-size: 2rem;
+    text-transform: uppercase;
+    text-align: center;
+}
+#skills .container > div h4{
+    font-family: Jost;
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 0;
+}
+
+#skills .skill{
+    flex-basis: 20%;
+    margin-block: 3rem;
+    position: relative;
+}
+#skills .skill:hover h3{
+    color: #44b4ac;
+}
+#skills #soft + div .skill{
+    flex-basis: 25%;
+}
+#skills .skill img{
+    aspect-ratio: 1/1;
+    display: block;
+    width: 30%;
+    height: auto;
+    margin-inline: auto;
+    filter: invert(1);
+}
+#skills .skill .description{
+    position: absolute;
+    background-color: black;
+    color: #f4edd9;
+    width: 100%;
+    top: 80%;
+    left: 0;
+    border-radius: 20px;
+    transform-origin: top;
+    transform: scaleY(0);
+    z-index: 1;
+    
+}
+#skills .skill .description p{
+    text-align: left;
+    font-size: 1.8rem;
+    margin-block: 2rem;
+    padding-inline: 2rem;
+}
+#skills .skill:hover .description{
+    transform: scaleY(1);
+    transition: all 0.5s;
+}
+#skills .skill:hover img{
+    position: relative;
+    filter: invert(55%) sepia(59%) saturate(386%) hue-rotate(127deg) brightness(101%) contrast(90%);
+    z-index: 2;
+    cursor: pointer;
+
+}
+
+
+#resume{
+    background: url("../../../imgs/backgrounds/background_light_bottom_bis.png") bottom;
+    background-size: cover;
+}
+@media screen and (max-width:850px){
+    #resume{
+        background: url("../../../imgs/backgrounds/background_light_bottom_bis_mobile.png") bottom;
+        background-size: cover;
+    }
+    
+}
+#resume h2{
+    font-family: Jost;
+    text-transform: uppercase;
+    color: #44b4ac;
+    font-size: 3.5rem;
+    text-align: center;
+    border-bottom: solid black 3px;
+    padding-bottom: 3rem;
+    margin-bottom: 0;
+    margin-top: 5rem;
+}
+#resume h3{
+    font-family: Jost;
+    font-size: 2.2rem;
+    text-transform: uppercase;
+    color: black;
+}
+#resume .global{
+    display: flex;
+    justify-content: space-between;
+}
+#resume .global .resume{
+    flex-basis: 45%;
+}
+#resume .global .resume .exp{
+    border-bottom: solid black 3px;
+    position: relative;
+    padding-block: 1rem;
+}
+#resume .global .resume .exp .informations{
+    overflow-y: hidden;
+    transition: all 0.5s;
+}
+
+#resume .global .resume .exp .informations div{
+    display: flex;
+    justify-content: space-between;
+    font-size: 2rem;
+    color: black;
+}
+#resume .global .resume .exp .informations div strong{
+    black-space: nowrap;
+}
+#resume .global .resume .exp p{
+    font-size: 2rem;
+    margin-block: 4rem;
+}
+#resume .global .resume .exp .more{
+    width: 50px;
+    height: 50px;
+    background-color: #44b4ac;
+    border-radius: 100%;
+    box-shadow: black 5px 3px;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    transform: translate(50%,50%);
+    cursor: pointer;
+    transition: all 0.2s;
+}
+#resume .global .resume .exp:not(.hidden) .more{
+    background-color: black;
+    box-shadow: #909494 5px 3px;;
+}
+#resume .global .resume .exp .more:hover{
+    box-shadow: black 0px 0px;
+
+}
+#resume .global .resume .exp:not(.hidden) .more:hover{
+    box-shadow: #909494 0px 0px;
+
+}
+#resume .global .resume .exp .more:after{
+    content: "";
+    width: 22px;
+    height: 5px;
+    background-color: #f4edd9;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    transition: all 0.2s;
+}
+#resume .global .resume .exp:not(.hidden) .more:after{
+    background-color: #f4edd9;
+}
+#resume .global .resume .exp .more:before{
+    content: "";
+    width: 5px;
+    height: 22px;
+    background-color: #f4edd9;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    transition: all 0.5s;
+
+}
+#resume .global .resume .exp:not(.hidden) .more::before{
+    opacity: 0;
+}
+
+@media screen and (max-width: 850px) {
+    #resume{
+        background-size: 100% 100%;
+        background-position: center;
+    }
+    section h2{
+        font-size: 2.5rem;
+    }
+    #presentation .container > div{
+        flex-direction: column;
+    }
+    #presentation .container .photo{
+        width: 75%;
+        margin-block: 5rem;
+        box-shadow: black 10px 8px;
+    }
+    #skills label{
+        white-space: nowrap;
+    }
+
+    #skills .skill{
+        flex-basis: 45%;
+    }
+    #skills .skill img{
+        position: relative;
+        filter: invert(55%) sepia(59%) saturate(386%) hue-rotate(127deg) brightness(101%) contrast(90%);
+        z-index: 2;
+    }
+    #skills .skill .description{
+        position: relative;
+        top: -15px;
+        transform: scaleY(1);
+        padding: 1rem;
+        width: 90%;
+        margin-top: 1rem;
+    }
+    #skills #soft + div .skill{
+        flex-basis: 45%;
+    }
+    #skills #soft + div .skill img{
+        filter: invert(1);
+    }
+    #resume .global{
+        flex-direction: column;
+        width: 80%;
+        margin-inline: auto;
+    }
+    #resume .global .resume{
+        margin-block: 3rem;
+    }
+    #resume .global .resume .exp .more{
+        width: 30px;
+        height: 30px;
+    }
+    #resume .global .resume .exp .more:after{
+        width: 15px;
+        height: 3px;
+    }
+    #resume .global .resume .exp .more:before{
+        height: 15px;
+        width: 3px;
+    }
+
+    
+}

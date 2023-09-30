@@ -1,0 +1,142 @@
+#intro h1, #intro h2{
+    text-align: center;
+    margin: 0;
+}
+#intro{
+    background: url("../../../imgs/backgrounds/background_light_top_bis.png") top;
+    background-size: cover;
+}
+@media screen and (max-width: 850px) {
+    #intro{
+        background: url("../../../imgs/backgrounds/background_light_top_bis_mobile.png") top;
+        background-size: cover;
+    }
+}
+#intro h2{
+    font-size: 2.5rem;
+    margin-top: 2rem;
+}
+#title h3{
+    color: #44b4ac;
+    text-align: center;
+    font-size: 6rem;
+    text-transform: uppercase;
+    padding-block: 3rem;
+    margin-bottom: 0;
+}
+#service{
+    background: url("../../../imgs/backgrounds/background_light_bottom_bis.png") bottom;
+    background-size: cover;
+}
+@media screen and (max-width: 850px) {
+    #service{
+        background: url("../../../imgs/backgrounds/background_light_bottom_bis_mobile.png") bottom;
+        background-size: cover;
+    }
+}
+#service .container p{
+    font-size: 2rem;
+    text-align: justify;
+}
+#service .container > p{
+    text-align: center;
+    margin-bottom: 10rem;
+    margin-top: 0;
+    padding-top: 3rem;
+}
+#service .container ol{
+    list-style-type: none;
+}
+#service .container ol{
+    counter-reset: item;
+    padding-left: 0;
+}
+#service .container li{
+    font-size: 3rem;
+    font-family: Tumb;
+    color: #44b4ac;
+    text-transform: uppercase;
+    margin-block: 5rem;
+    margin-bottom: 0rem;
+    counter-increment: item;
+    display: flex;
+    align-items: center;
+    width: fit-content;
+    max-width: 50%;
+}
+#service .container div:nth-child(odd) li::before{
+    content: counter(item);
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Jost;
+    color: #f4edd9;
+    min-width: 50px;
+    min-height: 50px;
+    border-radius: 100%;
+    margin-right: 3rem;
+    box-shadow: #909494 5px 3px;
+    font-weight: bold;
+
+}
+#service .container div:nth-child(even) li::after{
+    content: counter(item);
+    background-color: #44b4ac;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Jost;
+    color: #f4edd9;
+    min-width: 50px;
+    min-height: 50px;
+    border-radius: 100%;
+    margin-left: 3rem;
+    box-shadow: black 5px 3px;
+    font-weight: bold;
+}
+#service .container div:nth-child(odd) li{
+    color: black;
+}
+#service .container div:nth-child(even) li{
+    margin-right: 0;
+    margin-left: auto;
+    text-align: right;
+}
+#service .container div:nth-child(even) p{
+    margin-right: 0;
+    margin-left: auto;
+
+}
+#service .container div {
+    margin-block: 3rem;
+}
+#service .container div p{
+    max-width: 50%;
+}
+
+@media screen and (max-width:850px) {
+    #intro h2{
+        font-size: 2.5rem;
+    }
+    #title h3{
+        font-size: 4rem;
+    }
+    #service{
+        background-size: cover;
+        background-position: center;
+    }
+    #service .container div p{
+        max-width: 100%;
+    }
+    #service .container li{
+        font-size: 2.5rem;
+        max-width: 100%;
+    }
+    #service .container div:nth-child(odd) li::before{
+        width: 40px;
+        height: 40px;
+    }
+
+    
+}
