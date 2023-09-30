@@ -35,7 +35,7 @@ professional.</p>
 </section>
 <section id="skills">
     <div class="container">
-        <h1>skills</h1>
+        <h1>knowledge</h1>
         <nav>
             <label for="soft" class="active">soft skills</label>
             <label for="hard">hard skills</label>

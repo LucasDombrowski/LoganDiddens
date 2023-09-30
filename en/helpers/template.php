@@ -4,7 +4,7 @@ function getHeader($css = NULL){
     if(isset($_SESSION["mode"])){
         $mode = $_SESSION["mode"];
     } else {
-        $mode = "dark";
+        $mode = "light";
     }?>
     <!DOCTYPE html>
     <html lang="en">
@@ -35,7 +35,7 @@ function getHeader($css = NULL){
                 <a href="/en/">home</a>
                 <a href="/en/about">about me</a>
                 <div class="undermenu">
-                    <a href="/en/services/">services</a>
+                    <a href="/en/services/">skills</a>
                     <div>
                         <a href="/en/services/graphic">graphic design</a><a href="/en/services/photography/">photography</a><a href="/en/services/audiovisual/">audiovisual</a><a href="/en/services/communication">communication</a><a href="/en/services/design/">ux/ui design</a>
                     </div>
@@ -44,10 +44,10 @@ function getHeader($css = NULL){
                 <div id="lang">EN <i class='bx bx-chevron-right'></i><a href="<?php echo str_replace("/en","",$_SERVER['REQUEST_URI']);?>">FR</a></div>
                 <div id="mode">
                     <?php
-                    if(isset($_SESSION["mode"])){
-                        if($_SESSION["mode"] == "light"){
+                    if(isset($mode)){
+                        if($mode == "light"){
                             echo "<img src='/assets/imgs/icons/light.png'><i class='bx bx-chevron-right'></i><a href='/changeMode.php?mode=dark'><img src='/assets/imgs/icons/dark.png'></a>";
-                        } else if($_SESSION["mode"] == "dark"){
+                        } else if($mode == "dark"){
                             echo "<img src='/assets/imgs/icons/dark.png'><i class='bx bx-chevron-right'></i><a href='/changeMode.php?mode=light'><img src='/assets/imgs/icons/light.png'></a>";
                         }
                     } else {
@@ -71,7 +71,7 @@ function getFooter($scripts = NULL){?>
         <div>
             <h2>about me</h2>
             <a href="/en/about/#presentation">presentation</a>
-            <a href="/en/about/#skills">skills</a>
+            <a href="/en/about/#skills">knowledge</a>
             <a href="/en/about/#resume">resume</a>
         </div>
         <div>

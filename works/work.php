@@ -62,19 +62,13 @@ getHeader(["works/work.css"]);
     <div class="container">
         <h1>voir plus de photos</h1>
         <div id="wrapper">
-            <?php
-            if(count($work["images"])>=3):?>
             <button id="leftArrow" class="arrow" onclick="slideLeft()"><i class='bx bx-chevron-left'></i></button>
-            <?php endif;?>
             <div id="caroussel">
                 <?php foreach($work["images"] as $image):?>
                     <img src="<?php echo $image;?>">
                 <?php endforeach;?>
             </div>
-            <?php
-            if(count($work["images"])>=3):?>
             <button id="rightArrow" class="arrow" onclick="slideRight()"><i class='bx bx-chevron-right'></i></button>
-            <?php endif;?>
         </div>
     </div>
 </section>

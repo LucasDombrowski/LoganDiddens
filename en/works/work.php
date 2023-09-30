@@ -11,6 +11,9 @@ if(!isset($_GET["id"])){
         header("Location: index.php");
     } else {
         $work["images"] = glob("../../assets/imgs/projects/".$work["id"]."/*.*");
+        if(str_starts_with($work["link"],"https://www.youtube.com") or str_starts_with($work["link"],"https://youtu.be")){
+            $youtube = substr($work["link"],-11);
+        }
     }
 }
 getHeader(["works/work.css"]);
@@ -59,19 +62,13 @@ getHeader(["works/work.css"]);
     <div class="container">
         <h1>view more photos</h1>
         <div id="wrapper">
-            <?php
-            if(count($work["images"])>=3):?>
             <button id="leftArrow" class="arrow" onclick="slideLeft()"><i class='bx bx-chevron-left'></i></button>
-            <?php endif;?>
             <div id="caroussel">
                 <?php foreach($work["images"] as $image):?>
                     <img src="<?php echo $image;?>">
                 <?php endforeach;?>
             </div>
-            <?php
-            if(count($work["images"])>=3):?>
             <button id="rightArrow" class="arrow" onclick="slideRight()"><i class='bx bx-chevron-right'></i></button>
-            <?php endif;?>
         </div>
     </div>
 </section>

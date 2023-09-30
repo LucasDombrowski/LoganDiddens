@@ -71,7 +71,7 @@ getHeader(["about/about.css"]);
                 <img src="/assets/imgs/icons/hard/illustrator.png" alt="Illustrator">
                 <div class="description">
                     <h4>illustrator</h4>
-                    <p>Des compétences avancées sur Illustrator. Des créations professionnelles de médias digitaux pour créer une identité graphique et mettre en avant des valeurs.</p>
+                    <p>Des compétences avancées sur Illustrator. Des créations professionnelles de médias digitaux pour créer une identité graphique et mettre en avant vos valeurs.</p>
                 </div>
             </div>
             <div class="skill">

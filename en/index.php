@@ -295,7 +295,7 @@ getHeader(["index.css"]);?>
                     <div class="text">
                         <h3>address</h3>
                         <p>
-                            141 Cité Bruno 62119 Dourges, FRANCE
+                            62119 Dourges, FRANCE
                         </p>
                     </div>
                 </div>

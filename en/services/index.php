@@ -4,7 +4,7 @@ getHeader(["services/services.css"]);
 ?>
 <section id="services">
     <div class="container">
-        <h1>services</h1>
+        <h1>skills</h1>
         <h2>You always have a reason to make me work.</h2>
         <div class="cards">
             <div class="wrapper"><div id="caroussel">

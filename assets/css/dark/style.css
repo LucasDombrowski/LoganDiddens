@@ -50,7 +50,7 @@ h1{
     -webkit-text-stroke-width: 1px;
     color: #44b4ac;
     height: fit-content;
-    text-shadow: #f4edd9 8px 8px;
+    text-shadow: #f4edd9 5px 5px;
     text-transform: uppercase;
 }
 h2,h3,h4,h5{
@@ -69,7 +69,7 @@ a.button, button.button{
     font-size: 2rem;
     padding: 1rem 3rem;
     border-radius: 30px;
-    box-shadow: #44b4ac 12px 8px;
+    box-shadow: #44b4ac 8px 5px;
     border: solid black 3px;
     transition: all 0.2s;
     width: fit-content;
@@ -89,7 +89,7 @@ header{
     left: 0;
     width: 100%;
     z-index: 3;
-    background: url("../../imgs/backgrounds/header_dark.png") black;
+    background: black;
     background-size: cover;
     background-position: center;
     display: flex;
@@ -110,6 +110,7 @@ header nav > a:nth-last-child(1){
     margin-left: 1rem;
 }
 header a#logo img{
+    filter: brightness(0) saturate(100%) invert(91%) sepia(18%) saturate(383%) hue-rotate(328deg) brightness(107%) contrast(91%);
     width: 70px;
     margin-left: 5rem;
 }
@@ -204,22 +205,22 @@ header nav .undermenu div{
     font-size: 1.5rem;
     text-align: center;
     position: absolute;
-    left: 3rem;
+    left: calc(50% + 1.5rem);
     top: 3rem;
-    transform: scaleY(0);
+    transform: scaleY(0) translateX(-50%);
     background-color: #f4edd9;
     color: #44b4ac;
     padding-block: 3rem;
     border-radius: 15px;
     transform-origin: top;
-    width: calc(100% - 3rem);
+    width: 100%;
 }
 header nav .undermenu div a{
     display: block;
     padding: 1.5rem 1rem;
 }
 header nav .undermenu:hover div{
-    transform: scaleY(1);
+    transform: scaleY(1) translateX(-50%);
     transition: all 0.5s;
     transition-delay: 0.5s;
 }
@@ -234,10 +235,9 @@ header nav a#contactButton{
 footer{
     text-transform: uppercase;
     letter-spacing: 2px;
-    padding-top: 3em;
-    background: url("../../imgs/backgrounds/footer_dark.png") black;
-    background-size: cover;
-    background-position: center;
+}
+main > section:last-child{
+    padding-bottom: 15rem;
 }
 footer h2{
     font-family: Jost;
@@ -319,7 +319,7 @@ header #burger{
         display: block;
     }
     #lang, #mode{
-        font-size: 2.5rem;
+        font-size: 2.8rem;
         margin-left: 0;
         margin-top: 5rem;
         display: flex;
@@ -333,6 +333,7 @@ header #burger{
     }
     #mode{
         margin-top: 3rem;
+        margin-bottom: 5rem;
     }
     #mode a{
         filter: invert(55%) sepia(59%) saturate(386%) hue-rotate(127deg) brightness(101%) contrast(90%);
@@ -393,11 +394,11 @@ header #burger{
         min-width: 100vw;
         min-height: 100vh;
         flex-direction: column;
-        justify-content: center;
         align-items: center;
         transition: all 0.5s;
         transform-origin: right;
         backdrop-filter: brightness(0);
+        margin-top: 10rem;
     }
     header a#logo img{
         width: 50px;
@@ -410,10 +411,13 @@ header #burger{
     header nav > a , header nav .undermenu > a{
         margin-left: 0;
         margin-block: 2rem;
-        font-size: 2.5rem;
+        font-size: 2.8rem;
+    }
+    header nav .undermenu div{
+        display: none;
     }
     header nav > a#contactButton{
-        font-size: 2.5rem;
+        font-size: 2.8rem;
     }
     header nav > a:nth-child(1){
         margin-top: 0;

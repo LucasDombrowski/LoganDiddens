@@ -140,9 +140,9 @@ section{
     position: absolute;
     background-color: black;
     color: #f4edd9;
-    width: 100%;
+    width: 110%;
     top: 80%;
-    left: 0;
+    left: -5%;
     border-radius: 20px;
     transform-origin: top;
     transform: scaleY(0);

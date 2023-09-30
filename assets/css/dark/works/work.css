@@ -58,7 +58,7 @@
 
 
 #photos{
-    padding-top: 15rem;
+    padding-top: 12rem;
     background: url("../../../imgs/backgrounds/background_dark_bottom.png") top;
     background-size: cover;
 }
@@ -71,6 +71,7 @@
 }
 #photos h1{
     text-align: center;
+    margin-top: 0;
 }
 #wrapper{
     overflow-x: hidden;

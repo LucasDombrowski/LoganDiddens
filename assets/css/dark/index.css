@@ -308,6 +308,7 @@ section.scrolling{
 #services {
     background: url("../../imgs/backgrounds/background_dark_bottom_bis.png") bottom;
     background-size: cover;
+    padding-top: 0;
 }
 @media screen and (max-width: 850px) {
     #services {
@@ -875,8 +876,8 @@ section.scrolling{
         font-size: 8rem;
     }
     #about .container .text p{
-        font-size: 2.5rem;
-        margin-bottom: 3rem;
+        font-size: 2.8rem;
+        margin-block: 3rem;
     }
     #about .container .text a{
         margin-bottom: 3rem;
@@ -932,12 +933,13 @@ section.scrolling{
     #numbers .container{
         flex-direction: column;
         align-items: center;
+        padding-block: 1rem;
     }
     #numbers .container .rotate{
         display: none;
     }
     #numbers .container .number{
-        margin-block: 3rem;
+        margin-block: 1rem;
     }
     #works .container h2{
         text-align: center;
@@ -1018,6 +1020,7 @@ section.scrolling{
         transform-origin: top;
         transition: all 0.5s;
         border-radius: 20px;
+        border-bottom: none;
 
     }
     #works .container .projects #phone.active nav{

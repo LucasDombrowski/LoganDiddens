@@ -5,7 +5,7 @@ function getHeader($css = NULL){
     if(isset($_SESSION["mode"])){
         $mode = $_SESSION["mode"];
     } else {
-        $mode = "dark";
+        $mode = "light";
     }?>
     <!DOCTYPE html>
     <html lang="fr">
@@ -36,7 +36,7 @@ function getHeader($css = NULL){
                 <a href="/">Accueil</a>
                 <a href="/about/">à propos</a>
                 <div class="undermenu">
-                    <a href="/services">services</a>
+                    <a href="/services">compétences</a>
                     <div>
                         <a href="/services/graphic/">Design graphique</a><a href="/services/photography/">photographie</a><a href="/services/audiovisual/">audiovisuel</a><a href="/services/communication/">communication</a><a href="/services/design/">UX/UI Design</a>
                     </div>
@@ -45,10 +45,10 @@ function getHeader($css = NULL){
                 <div id="lang">FR <i class='bx bx-chevron-right'></i><a href="<?php echo "/en".$_SERVER['REQUEST_URI'];?>">EN</a></div>
                 <div id="mode">
                     <?php
-                    if(isset($_SESSION["mode"])){
-                        if($_SESSION["mode"] == "light"){
+                    if(isset($mode)){
+                        if($mode == "light"){
                             echo "<img src='/assets/imgs/icons/light.png'><i class='bx bx-chevron-right'></i><a href='/changeMode.php?mode=dark'><img src='/assets/imgs/icons/dark.png'></a>";
-                        } else if($_SESSION["mode"] == "dark"){
+                        } else if($mode == "dark"){
                             echo "<img src='/assets/imgs/icons/dark.png'><i class='bx bx-chevron-right'></i><a href='/changeMode.php?mode=light'><img src='/assets/imgs/icons/light.png'></a>";
                         }
                     } else {
@@ -73,7 +73,7 @@ function getFooter($scripts = NULL){?>
         <div>
             <h2>à propos</h2>
             <a href="/about/#presentation">présentation</a>
-            <a href="/about/#skills">compétences</a>
+            <a href="/about/#skills">savoirs</a>
             <a href="/about/#resume">CV</a>
         </div>
         <div>
@@ -83,7 +83,7 @@ function getFooter($scripts = NULL){?>
             <a href="/legal/cookies">utilisation des cookies</a>
         </div>
         <div>
-            <h2><a href="/en/#contact">contact</a></h2>
+            <h2><a href="/#contact">contact</a></h2>
             <h2>suivez-moi</h2>
             <div class="social_networks">
                 <a href="https://www.linkedin.com/in/logan-diddens-50a61b250"><i class='bx bxl-linkedin'></i></a>
