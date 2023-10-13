@@ -31,7 +31,7 @@ getHeader(["works/work.css"]);
         </div>
         <div id="infos">
             <h2><?php echo $work["englishName"]?></h2>
-            <p><b>Category: </b>
+            <p><b>Category: </b>&nbsp;
         <?php
         if($work["category"]=="graphic"){
             echo "Graphic Design";
@@ -48,7 +48,7 @@ getHeader(["works/work.css"]);
         }
         ?>
         </p>
-        <p><b>Softwares: </b><?php echo $work["softwares"];?></p>
+        <p><b>Softwares: </b>&nbsp;<?php echo $work["softwares"];?></p>
         <p><b>Description: </b><br><?php echo str_replace("\n","<br",$work["englishDescription"]);?></p>
         <?php if(isset($work["link"]) and !empty($work["link"])):?>
             <a href="<?php echo $work["link"]?>" class="button">Watch the work</a>

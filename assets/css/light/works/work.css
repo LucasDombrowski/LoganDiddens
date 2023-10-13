@@ -29,10 +29,12 @@
     box-shadow: #909494 25px 25px;
 }
 #work #thumbnail img{
+    aspect-ratio: 16/9;
     width: 100%;
+    height: auto;
     border-radius: 20px;
     max-height: 700px;
-    object-fit: contain;
+    object-fit: cover;
 }
 #work #thumbnail iframe{
     width: 100%;
